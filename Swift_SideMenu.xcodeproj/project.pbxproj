@@ -16,6 +16,8 @@
 		9B1AE53927AB3681009CB23A /* Swift_SideMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE53827AB3681009CB23A /* Swift_SideMenuTests.swift */; };
 		9B1AE54327AB3681009CB23A /* Swift_SideMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE54227AB3681009CB23A /* Swift_SideMenuUITests.swift */; };
 		9B1AE54527AB3681009CB23A /* Swift_SideMenuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE54427AB3681009CB23A /* Swift_SideMenuUITestsLaunchTests.swift */; };
+		9B1AE55327AB39B2009CB23A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE55227AB39B2009CB23A /* HomeViewController.swift */; };
+		9B1AE55527AB39C2009CB23A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE55427AB39C2009CB23A /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9B1AE53E27AB3681009CB23A /* Swift_SideMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift_SideMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1AE54227AB3681009CB23A /* Swift_SideMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_SideMenuUITests.swift; sourceTree = "<group>"; };
 		9B1AE54427AB3681009CB23A /* Swift_SideMenuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_SideMenuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B1AE55227AB39B2009CB23A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9B1AE55427AB39C2009CB23A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,9 @@
 		9B1AE52027AB3680009CB23A /* Swift_SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				9B1AE55127AB398F009CB23A /* ViewController */,
 				9B1AE52127AB3680009CB23A /* AppDelegate.swift */,
 				9B1AE52327AB3680009CB23A /* SceneDelegate.swift */,
-				9B1AE52527AB3680009CB23A /* ContainerViewController.swift */,
 				9B1AE52727AB3680009CB23A /* Main.storyboard */,
 				9B1AE52A27AB3681009CB23A /* Assets.xcassets */,
 				9B1AE52C27AB3681009CB23A /* LaunchScreen.storyboard */,
@@ -125,6 +129,16 @@
 				9B1AE54427AB3681009CB23A /* Swift_SideMenuUITestsLaunchTests.swift */,
 			);
 			path = Swift_SideMenuUITests;
+			sourceTree = "<group>";
+		};
+		9B1AE55127AB398F009CB23A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B1AE52527AB3680009CB23A /* ContainerViewController.swift */,
+				9B1AE55227AB39B2009CB23A /* HomeViewController.swift */,
+				9B1AE55427AB39C2009CB23A /* MenuViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B1AE52627AB3680009CB23A /* ContainerViewController.swift in Sources */,
+				9B1AE55527AB39C2009CB23A /* MenuViewController.swift in Sources */,
 				9B1AE52227AB3680009CB23A /* AppDelegate.swift in Sources */,
 				9B1AE52427AB3680009CB23A /* SceneDelegate.swift in Sources */,
+				9B1AE55327AB39B2009CB23A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
