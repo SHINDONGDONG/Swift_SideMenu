@@ -34,6 +34,7 @@ class ContainerViewController: UIViewController {
     private func addChildVC() {
         //menu
         //자식으로 menuVC를 추가시킨다.
+        menuVC.delegate = self
         addChild(menuVC)
         view.addSubview(menuVC.view )
         menuVC.didMove(toParent: self)
@@ -56,6 +57,9 @@ class ContainerViewController: UIViewController {
 extension ContainerViewController: HomeViewControllerDelegate {
     func didTapMenuButton() {
         //스위치문으로 enum 애들을 나열해줌.
+        toggleMenu(completion: nil)
+    }
+    func toggleMenu(completion: (()-> Void)?) {
         switch menuState {
         case .closed:
             //open 해줌       //duration 0.5
@@ -90,13 +94,30 @@ extension ContainerViewController: HomeViewControllerDelegate {
             } completion: { [weak self] done in
                 if done {
                     self?.menuState = .closed
+                    DispatchQueue.main.async {
+                        completion?()
+                    }
                 }
             }
         }
-        
-        
-        
     }
-    
-    
+}
+
+extension ContainerViewController: MenuViewControllerDelegate {
+    func didSelect(menuItem: MenuViewController.MenuOptions) {
+        toggleMenu() {
+            switch menuItem {
+            case .home:
+                break
+            case .info:
+                break
+            case .appRating:
+                break
+            case .shareApp:
+                break
+            case .settings:
+                break
+            }
+        }
+    }
 }
