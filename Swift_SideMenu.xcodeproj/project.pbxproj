@@ -18,6 +18,7 @@
 		9B1AE54527AB3681009CB23A /* Swift_SideMenuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE54427AB3681009CB23A /* Swift_SideMenuUITestsLaunchTests.swift */; };
 		9B1AE55327AB39B2009CB23A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE55227AB39B2009CB23A /* HomeViewController.swift */; };
 		9B1AE55527AB39C2009CB23A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE55427AB39C2009CB23A /* MenuViewController.swift */; };
+		9B38AF7D27B1C4F000A9332F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B38AF7C27B1C4F000A9332F /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9B1AE54427AB3681009CB23A /* Swift_SideMenuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_SideMenuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9B1AE55227AB39B2009CB23A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9B1AE55427AB39C2009CB23A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9B38AF7C27B1C4F000A9332F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				9B1AE52527AB3680009CB23A /* ContainerViewController.swift */,
 				9B1AE55227AB39B2009CB23A /* HomeViewController.swift */,
 				9B1AE55427AB39C2009CB23A /* MenuViewController.swift */,
+				9B38AF7C27B1C4F000A9332F /* InfoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				9B1AE55527AB39C2009CB23A /* MenuViewController.swift in Sources */,
 				9B1AE52227AB3680009CB23A /* AppDelegate.swift in Sources */,
 				9B1AE52427AB3680009CB23A /* SceneDelegate.swift in Sources */,
+				9B38AF7D27B1C4F000A9332F /* InfoViewController.swift in Sources */,
 				9B1AE55327AB39B2009CB23A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

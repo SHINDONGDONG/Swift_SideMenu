@@ -23,6 +23,7 @@ class ContainerViewController: UIViewController {
     let menuVC = MenuViewController()
     let homeVC = HomeViewController()
     var navVC: UINavigationController?
+    lazy var infoVC = InfoViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,12 +106,14 @@ extension ContainerViewController: HomeViewControllerDelegate {
 
 extension ContainerViewController: MenuViewControllerDelegate {
     func didSelect(menuItem: MenuViewController.MenuOptions) {
-        toggleMenu() {
+        toggleMenu (completion: nil)
             switch menuItem {
             case .home:
-                break
+                self.returnToHome()
             case .info:
-                break
+                self.addInfo()
+//                let vc = InfoViewController()
+//                self?.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
             case .appRating:
                 break
             case .shareApp:
@@ -119,5 +122,34 @@ extension ContainerViewController: MenuViewControllerDelegate {
                 break
             }
         }
+    
+    
+    func addInfo() {
+        let vc = infoVC
+  
+        homeVC.addChild(vc)
+        //homevc 위에 vc의 view를 깔아준다.
+        homeVC.view.addSubview(vc.view)
+        //vc의 fram은 view.frame과 같게 만든다.
+        vc.view.frame = view.frame
+        //!!!!!!!!!!!!!toParent로 하면 Controller는 homevc위에서 view만 올려주게되어서
+        //타이틀이 homeVC로됨 완전히 view를 넘기려면 위의 모든 homeVC는 빼버림 로함
+        vc.didMove(toParent: homeVC)
+        homeVC.title = vc.title
+        
+//        addChild(vc)
+//        //homevc 위에 vc의 view를 깔아준다.
+//        view.addSubview(vc.view)
+//        //vc의 fram은 view.frame과 같게 만든다.
+//        vc.view.frame = view.frame
+//        //!!!!!!!!!!!!!toParent로 하면 Controller는 homevc위에서 view만 올려주게되어서
+//        //타이틀이 homeVC로됨 완전히 view를 넘기려면 위의 모든 homeVC는 빼버림 로함
+//        vc.didMove(toParent: self)
+    }
+    
+    func returnToHome() {
+        infoVC.view.removeFromSuperview()
+        infoVC.didMove(toParent: nil)
+        homeVC.title = "HOME"
     }
 }
